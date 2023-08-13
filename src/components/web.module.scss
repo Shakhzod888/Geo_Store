@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+* {
+  img {
+    cursor: pointer;
+  }
+}
+
+.links {
+  border-radius: 8px;
+  height: 45px;
+  padding-top: 10px;
+  cursor: pointer;
+
+  &:hover {
+    // background-color: rgb(214, 50, 50);
+    background-color: white;
+    color: black;
+    transition: ease 0.6s;
+  }
+
+  &:active {
+    box-shadow: 0 5px #666;
+    transition: all ease 0.2s;
+    transform: translateY(3px);
+  }
+}
+
+.linkIcons {
+  cursor: pointer;
+  padding: 10px;
+  &:hover {
+    background-color: black;
+    border-radius: 50%;
+    color: black;
+    transition: all ease 0.6s;
+  }
+}
+
+.mainProducts {
+  height: calc(100vh - 100px);
+}
+
+.productImges {
+  width: 100%;
+  object-fit: cover;
+  height: calc(100vh - 100px);
+}
+
+.caruselProducts {
+  padding-top: 20px;
+  padding-right: 22px;
+  img {
+    cursor: pointer;
+    object-fit: cover;
+    width: 165px;
+    height: 190px;
+  }
+}
+
+.cursoreP {
+  cursor: pointer;
+}
+
+.cost {
+  color: #000000b2;
+}
+.email_input {
+  width: 670px;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #c4c4c4;
+  margin-left: 80px;
+  padding-left: 10px;
+
+  &::placeholder {
+    color: #545454;
+    font-size: 20px;
+  }
+}
+
+.lastProg {
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  padding-top: 40px;
+}
