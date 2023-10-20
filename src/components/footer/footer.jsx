@@ -1,50 +1,79 @@
 import { Box, Flex, Text } from "@mantine/core";
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
 function Footer() {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <>
-      <Box maw="100%" w="100%" h="50vh" bg="black">
+      <Box maw="100%" w="100%" h="auto" pb={20} bg="black">
         <Box pt={30}>
           <Flex justify="space-around" align="center">
             <Box c="#fff">
-              <Text fz={25}>MY ACCOUNT</Text>
+              <div data-aos="fade-left" data-aos-duration="800">
+                <Text fz={30}>MY ACCOUNT</Text>
+              </div>
               <Box pt={10}>
-                <Text fz={20}>Sign In</Text>
-                <Text fz={20}>Register</Text>
-                <Text fz={20}>Order Status</Text>
+                <Text fz={25} pt={10}>
+                  Sign In
+                </Text>
+                <Text fz={25} pt={10}>
+                  Register
+                </Text>
+                <Text fz={25} pt={10}>
+                  Order Status
+                </Text>
               </Box>
             </Box>
             <Box c="#fff">
-              <Text fz={25}>ABOUT</Text>
+              <Text fz={30}>ABOUT</Text>
               <Box pt={10}>
-                <Text fz={20}>My Store </Text>
-                <Text fz={20}>Media</Text>
-                <Text fz={20}>Sustainability</Text>
+                <Text fz={25} pt={10}>
+                  My Store{" "}
+                </Text>
+                <Text fz={25} pt={10}>
+                  Media
+                </Text>
+                <Text fz={25} pt={10}>
+                  Sustainability
+                </Text>
               </Box>
             </Box>
             <Box c="#fff">
-              <Text fz={25}>HELP</Text>
+              <Text fz={30}>HELP</Text>
               <Box pt={10}>
-                <Text fz={20}>Shipping</Text>
-                <Text fz={20}>Returns</Text>
-                <Text fz={20}>Sizing</Text>
+                <Text fz={25} pt={10}>
+                  Shipping
+                </Text>
+                <Text fz={25} pt={10}>
+                  Returns
+                </Text>
+                <Text fz={25} pt={10}>
+                  Sizing
+                </Text>
               </Box>
             </Box>
             <Box c="#fff">
-              <Text fz={25}>LEGAL STUFF</Text>
+              <Text fz={30}>LEGAL STUFF</Text>
               <Box pt={10}>
-                <Text fz={20}>Terms Of Use</Text>
-                <Text fz={20}>Terms Of Sale</Text>
-                <Text fz={20}>Privacy Policy</Text>
+                <Text fz={25} pt={10}>
+                  Terms Of Use
+                </Text>
+                <Text fz={25} pt={10}>
+                  Terms Of Sale
+                </Text>
+                <Text fz={25} pt={10}>
+                  Privacy Policy
+                </Text>
               </Box>
             </Box>
           </Flex>
         </Box>
-        <Text c="#ffffff" ta="center" fz={30} pt={40}>
+        <Text c="#ffffff" ta="center" fz={35} pt={40}>
           Follow Us
         </Text>
-        <Flex justify="center" align="center" gap={40} pt={10}>
+        <Flex justify="center" align="center" gap={50} pt={15}>
           <Box>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -106,24 +135,14 @@ function Footer() {
           <Box>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="31"
-              height="22"
-              viewBox="0 0 31 22"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
               fill="none"
             >
               <path
-                d="M20.7778 10.7821L16.4444 13.0088L12.1111 15.231V10.7821V6.33325L16.4444 8.55547L20.7778 10.7821Z"
-                stroke="white"
-                stroke-width="1.53333"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M25 1H5.88889C3.18883 1 1 3.18883 1 5.88889V16.1111C1 18.8112 3.18883 21 5.88889 21H25C27.7001 21 29.8889 18.8112 29.8889 16.1111V5.88889C29.8889 3.18883 27.7001 1 25 1Z"
-                stroke="white"
-                stroke-width="1.53333"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                d="M19.7684 0.402698C19.6132 0.207499 19.3897 0.0782726 19.1429 0.0410252C18.8961 0.00377775 18.6444 0.0612736 18.4383 0.201942L16.5171 1.53342C16.0625 1.05623 15.5148 0.677194 14.9078 0.419746C14.3008 0.162298 13.6474 0.0319023 12.988 0.0366144C11.6819 0.0389558 10.43 0.558218 9.50647 1.48066C8.58295 2.40311 8.06308 3.65354 8.06074 4.95808C8.05479 5.33921 8.09952 5.71944 8.19375 6.08881C5.86463 5.58987 4.49908 3.89525 3.93158 0.833732C3.89668 0.63957 3.80512 0.460037 3.66839 0.31769C3.53166 0.175343 3.35586 0.0765288 3.16309 0.033662C2.97473 -0.017697 2.77514 -0.0101377 2.59122 0.055321C2.4073 0.12078 2.24789 0.24099 2.13449 0.399746C2.06651 0.503076 -3.4282 8.11703 4.53159 14.6032C3.76606 16.2653 1.4665 17.6618 0.556129 18.0928C0.354776 18.1968 0.193457 18.3643 0.0972453 18.5693C0.00103379 18.7744 -0.024681 19.0054 0.0240972 19.2265C0.075081 19.4472 0.199713 19.644 0.37751 19.7846C0.555308 19.9251 0.775693 20.0011 1.00245 20H2.73451C12.8579 20 17.4511 14.9811 17.5841 3.7624L19.6797 1.76666C19.8674 1.59441 19.9814 1.3565 19.9979 1.10244C20.0144 0.848379 19.9322 0.597744 19.7684 0.402698ZM4.36312 17.96C5.39467 17.0743 6.3937 15.8934 6.69223 14.5028C6.73816 14.3141 6.72795 14.1161 6.66285 13.933C6.59774 13.75 6.48058 13.59 6.32572 13.4725C1.59655 9.92973 1.89212 6.02385 2.69904 3.6945C3.96409 6.68812 6.36119 8.21741 9.75733 8.24988C9.94021 8.25357 10.1204 8.20566 10.2773 8.11166C10.4341 8.01766 10.5612 7.88138 10.6441 7.71847C10.742 7.56119 10.7881 7.3772 10.7759 7.19237C10.7637 7.00755 10.6938 6.83119 10.5761 6.68812C10.2136 6.19596 10.0169 5.60154 10.0145 4.99055C10.0153 4.21485 10.3241 3.47113 10.8733 2.92262C11.4224 2.37411 12.167 2.06562 12.9436 2.06484C13.4368 2.06175 13.9224 2.18563 14.3536 2.42454C14.7849 2.66344 15.1472 3.00932 15.4057 3.42879C15.4437 3.48953 15.4894 3.54511 15.5417 3.59412C15.5181 13.1713 12.2195 17.461 4.36312 17.96Z"
+                fill="white"
               />
             </svg>
           </Box>

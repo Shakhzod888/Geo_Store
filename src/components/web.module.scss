@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
 }
 
 * {
@@ -18,7 +17,25 @@
   cursor: pointer;
 
   &:hover {
-    // background-color: rgb(214, 50, 50);
+    background-color: white;
+    color: black;
+    transition: ease 0.6s;
+  }
+
+  &:active {
+    box-shadow: 0 5px #666;
+    transition: all ease 0.2s;
+    transform: translateY(3px);
+  }
+}
+
+.buyNowBtn {
+  border-radius: 8px;
+  height: 50px;
+  padding-top: 10px;
+  cursor: pointer;
+
+  &:hover {
     background-color: white;
     color: black;
     transition: ease 0.6s;
@@ -65,6 +82,10 @@
 
 .cursoreP {
   cursor: pointer;
+  &:hover {
+    color: red;
+    transition: all ease 0.5s;
+  }
 }
 
 .cost {
@@ -73,15 +94,20 @@
 .email_input {
   width: 670px;
   border: none;
-  height: 40px;
-  border-radius: 5px;
+  height: 50px;
+  border-radius: 3px;
   background-color: #c4c4c4;
   margin-left: 80px;
+  font-style: 30px;
+  margin-top: 10px;
   padding-left: 10px;
+  font-family: "Noto Sans";
+  font-size: 25px;
+  font-weight: 600;
 
   &::placeholder {
     color: #545454;
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
@@ -90,5 +116,36 @@
   font-size: 20px;
   text-align: center;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 30px;
+  font-family: "Noto Sans";
+}
+
+.releasesBox {
+  img {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    width: 200px;
+    font-family: "Noto Sans";
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .cost {
+    font-size: 20px;
+    line-height: 7px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .cost2 {
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.showLinks {
+  display: none;
+  cursor: pointer;
 }
