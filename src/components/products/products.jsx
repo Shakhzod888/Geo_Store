@@ -1,32 +1,10 @@
 import { Text, Box, Flex } from "@mantine/core";
 import Style from "../web.module.scss";
 
-import WomenImg_1 from "../assets/Women_1.png";
-import WomenImg_2 from "../assets/Women_2.png";
-import WomenImg_3 from "../assets/Women_3.png";
-import WomenImg_4 from "../assets/Women_4.png";
-
-import New_1 from "../assets/new_1.png";
-import New_2 from "../assets/new_2.png";
-import New_3 from "../assets/new_3.png";
-import New_4 from "../assets/new_4.png";
-import New_5 from "../assets/new_5.png";
-import New_6 from "../assets/new_6.png";
-
-import Top_1 from "../assets/Top_1.png";
-import Top_2 from "../assets/Top_2.png";
-import Top_3 from "../assets/Top_3.png";
-import Top_4 from "../assets/Top_4.png";
-import Top_5 from "../assets/Top_5.png";
-import Top_6 from "../assets/Top_6.png";
-
-import Men_1 from "../assets/Men_1.png";
-import Men_2 from "../assets/Men_2.png";
-import Men_3 from "../assets/Men_3.png";
-import Men_4 from "../assets/Men_4.png";
 import { useState } from "react";
 import { ScrollArea } from "@mantine/core";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 function Products() {
   const [scrollPosition, onScrollPositionChange] = useState({ x: 0, y: 0 });
   return (
@@ -36,52 +14,96 @@ function Products() {
           <Box w="49%" h="60vh" bg="#545454">
             <Box pt={30}>
               <Fade top>
-                <Text fz={50} pl={60} fw={700} c="#FFFFFF">
+                <Text fz={50} pl={46} fw={700} c="#FFFFFF">
                   WOMEN
                 </Text>
               </Fade>
-              <Flex className={Style.caruselProducts} justify="end">
-                <img src={WomenImg_1} alt="" />
-                <img src={WomenImg_2} alt="" />
-                <img src={WomenImg_3} alt="" />
-                <img src={WomenImg_4} alt="" />
+              <Flex className={Style.caruselProducts} justify="end" gap={3}>
+                <img
+                  src={
+                    "https://media2.newlookassets.com/i/newlook/877293138.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                  }
+                  alt=""
+                />
+                <img
+                  src={
+                    "https://media2.newlookassets.com/i/newlook/877244292.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                  }
+                  alt=""
+                />
+                <img
+                  src={
+                    "https://media2.newlookassets.com/i/newlook/872142904.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                  }
+                  alt=""
+                />
+                <img
+                  src={
+                    "https://media2.newlookassets.com/i/newlook/884287955.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                  }
+                  alt=""
+                />
               </Flex>
               <Fade bottom>
-                <Text
-                  className={Style.cursoreP}
-                  pt={25}
-                  pl={60}
-                  fz={50}
-                  fw={700}
-                  c="#FFFFFF"
-                  ff={"Noto Sans"}
-                >{`SHOP NOW ->`}</Text>
+                <Link className={Style.LinkShop} to={"/allProducts"}>
+                  <Text
+                    className={Style.cursoreP}
+                    pt={25}
+                    pl={46}
+                    fz={50}
+                    fw={700}
+                    c="#FFFFFF"
+                    ff={"Noto Sans"}
+                  >{`SHOP NOW ->`}</Text>
+                </Link>
               </Fade>
             </Box>
           </Box>
           <Box w="49%" h="60vh" bg="#545454">
             <Box pt={30}>
               <Fade top>
-                <Text fz={50} pl={60} fw={700} c="#FFFFFF">
+                <Text fz={50} pl={46} fw={700} c="#FFFFFF">
                   MEN
                 </Text>
               </Fade>
-              <Flex className={Style.caruselProducts} justify="end">
-                <img src={Men_1} alt="" />
-                <img src={Men_2} alt="" />
-                <img src={Men_3} alt="" />
-                <img src={Men_4} alt="" />
+              <Flex className={Style.caruselProducts} justify="end" gap={3}>
+                <img
+                  src={
+                    "https://media3.newlookassets.com/i/newlook/848824927.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                  }
+                  alt=""
+                />
+                <img
+                  src={
+                    "https://media2.newlookassets.com/i/newlook/842893424.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                  }
+                  alt=""
+                />
+                <img
+                  src={
+                    "https://media2.newlookassets.com/i/newlook/864571724.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                  }
+                  alt=""
+                />
+                <img
+                  src={
+                    "https://media2.newlookassets.com/i/newlook/859567924.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                  }
+                  alt=""
+                />
               </Flex>
               <Fade bottom>
-                <Text
-                  className={Style.cursoreP}
-                  pt={25}
-                  pl={60}
-                  fz={50}
-                  fw={700}
-                  c="#FFFFFF"
-                  ff={"Noto Sans"}
-                >{`SHOP NOW ->`}</Text>
+                <Link className={Style.LinkShop} to={"/allProducts"}>
+                  <Text
+                    className={Style.cursoreP}
+                    pt={25}
+                    pl={46}
+                    fz={50}
+                    fw={700}
+                    c="#FFFFFF"
+                    ff={"Noto Sans"}
+                  >{`SHOP NOW ->`}</Text>
+                </Link>
               </Fade>
             </Box>
           </Box>
@@ -99,52 +121,88 @@ function Products() {
               >
                 <Flex justify="space-between" gap={95}>
                   <div className={Style.releasesBox}>
-                    <img src={New_1} alt="" />
+                    <img
+                      src={
+                        "https://media3.newlookassets.com/i/newlook/864355816.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
-                      Dsuared 2 Patent New Punk Derby Shoes
+                      Jack & Jones Stone Suede Lace Front Boat Shoes
                     </p>
-                    <p className={Style.cost}>Us $675</p>
-                    <p className={Style.cost2}>Ksh 67500 Sh</p>
+                    <Flex gap={10}>
+                      <p className={Style.cost}>Us $43.00</p>
+                      <p className={Style.costakk}>Us $47</p>
+                    </Flex>
                   </div>
                   <div className={Style.releasesBox}>
-                    <img src={New_2} alt="" />
+                    <img
+                      src={
+                        "https://media2.newlookassets.com/i/newlook/850949801.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
-                      New Season New Balance 550 Sneakers
+                      Black Moulded Sliders Rubber Soft And Comfortable
                     </p>
-                    <p className={Style.cost}>Us $310</p>
-                    <p className={Style.cost2}>Ksh 31000 Sh</p>
+                    <Flex gap={10}>
+                      <p className={Style.cost}>Us $11.99</p>
+                      <p className={Style.costakk}>Us $13.99</p>
+                    </Flex>
                   </div>
                   <div className={Style.releasesBox}>
-                    <img src={New_3} alt="" />
+                    <img
+                      src={
+                        "https://media2.newlookassets.com/i/newlook/870733618.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
-                      Giuseppe Zanotti New York Ankle Boots
+                      Tan Suedette Faux Fur Lined Chunky Boots
                     </p>
-                    <p className={Style.cost}>Us $671</p>
-                    <p className={Style.cost2}>Ksh 67100 Sh</p>
+                    <p className={Style.cost}>Us $25.99</p>
                   </div>
                   <div className={Style.releasesBox}>
-                    <img src={New_4} alt="" />
+                    <img
+                      src={
+                        "https://media3.newlookassets.com/i/newlook/852912901.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
-                      Tod’s New Gommini 122 Mocassins White.
+                      Black Suedette 2 Part Platform Block Heel Sandals
                     </p>
-                    <p className={Style.cost}>Us $475</p>
-                    <p className={Style.cost2}>Ksh 47500 Sh</p>
+                    <Flex gap={10}>
+                      <p className={Style.cost}>Us $32.99</p>
+                      <p className={Style.costakk}>Us $35.99</p>
+                    </Flex>
                   </div>
                   <div className={Style.releasesBox}>
-                    <img src={New_5} alt="" />
+                    <img
+                      src={
+                        "https://media3.newlookassets.com/i/newlook/850774301.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
-                      Giuseppe Zanotti Rudolph New Chain Loafers
+                      ONLY Black Leather-Look Chunky Lace Up Boots
                     </p>
-                    <p className={Style.cost}>Us $940</p>
-                    <p className={Style.cost2}>Ksh 94000 Sh</p>
+                    <p className={Style.cost}>Us $60</p>
                   </div>
                   <div className={Style.releasesBox}>
-                    <img src={New_6} alt="" />
+                    <img
+                      src={
+                        "https://media3.newlookassets.com/i/newlook/824021027.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
-                      palm angles new tennis leopard print sneaker
+                      Dark Brown Leather-Look Lace Up Brogues
                     </p>
-                    <p className={Style.cost}>Us $500</p>
-                    <p className={Style.cost2}>Ksh 50000 Sh</p>
+                    <Flex gap={10}>
+                      <p className={Style.cost}>Us $29.99</p>
+                      <p className={Style.costakk}>Us $31.99</p>
+                    </Flex>
                   </div>
                 </Flex>
               </ScrollArea>
@@ -164,52 +222,89 @@ function Products() {
               >
                 <Flex justify="space-between" gap={95}>
                   <div className={Style.releasesBox}>
-                    <img src={Top_1} alt="" />
+                    <img
+                      src={
+                        "https://media3.newlookassets.com/i/newlook/859427116.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
-                      Bally Tonal Stripe Low-Top Sneaker Black
+                      Jack & Jones Stone Contrast Stripe Trainers
                     </p>
-                    <p className={Style.cost}>Us $213</p>
-                    <p className={Style.cost2}>Ksh 21300 Sh</p>
+                    <Flex gap={10}>
+                      <p className={Style.cost}>Us $41.24</p>
+                      <p className={Style.costakk}>Us $44.00</p>
+                    </Flex>
                   </div>
                   <div className={Style.releasesBox}>
-                    <img src={Top_2} alt="" />
+                    <img
+                      src={
+                        "https://media2.newlookassets.com/i/newlook/832136809M2/mens/mens-footwear/mens-shoes/black-contrast-panel-chunky-trainers.jpg?strip=true&qlt=50&w=720"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
-                      Boss Low-Top Leather Sneakers Mix
+                      Black Contrast Panel Chunky Trainers <br /> Nike
                     </p>
-                    <p className={Style.cost}>Us $314</p>
-                    <p className={Style.cost2}>Ksh 31400 Sh</p>
+                    <p className={Style.cost}>Us $31.00</p>
                   </div>
                   <div className={Style.releasesBox}>
-                    <img src={Top_3} alt="" />
+                    <img
+                      src={
+                        "https://media3.newlookassets.com/i/newlook/859396310.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
-                      Adidas Black X Nice Kicks Ultra Boost Sneaker
+                      Jack & Jones White Leather-Look Lace Up Trainers
                     </p>
-                    <p className={Style.cost}>Us $671</p>
-                    <p className={Style.cost2}>Ksh 67100 Sh</p>
+                    <Flex gap={10}>
+                      <p className={Style.cost}>Us $35.00</p>
+                      <p className={Style.costakk}>Us $39.00</p>
+                    </Flex>
                   </div>
                   <div className={Style.releasesBox}>
-                    <img src={Top_4} alt="" />
+                    <img
+                      src={
+                        " https://media3.newlookassets.com/i/newlook/859419204.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
-                      Giuseppe Zanotti Kriss High-Top Sneakers
+                      Jack & Jones Grey Suede Lace Up Trainers
                     </p>
-                    <p className={Style.cost}>Us $290</p>
-                    <p className={Style.cost2}>Ksh 29000 Sh</p>
+                    <Flex gap={10}>
+                      <p className={Style.cost}>Us $50.00</p>
+                      <p className={Style.costakk}>Us $59.00</p>
+                    </Flex>
                   </div>
+
                   <div className={Style.releasesBox}>
-                    <img src={Top_5} alt="" />
+                    <img
+                      src={
+                        "https://media2.newlookassets.com/i/newlook/859441310.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
                       Giuseppe Zanotti Kriss Logo Low-Top Sneakers
                     </p>
-                    <p className={Style.cost}>Us $670</p>
-                    <p className={Style.cost2}>Ksh 67000 Sh</p>
+                    <p className={Style.cost}>Us $67</p>
                   </div>
                   <div className={Style.releasesBox}>
-                    <img src={Top_6} alt="" />
+                    <img
+                      src={
+                        "https://media3.newlookassets.com/i/newlook/859419216.jpg?strip=true&qlt=50&fmt=webp&w=526"
+                      }
+                      alt=""
+                    />
                     <p className={Style.name}>
-                      Philipp Plein Phantom Kick & High-Top Sneakers
+                      Jack & Jones Stone Suede Lace Up Brown
                     </p>
-                    <p className={Style.cost}>Us $1200</p>
-                    <p className={Style.cost2}>Ksh 120000 Sh</p>
+                    <Flex gap={10}>
+                      <p className={Style.cost}>Us $50.00</p>
+                      <p className={Style.costakk}>Us $55.00</p>
+                    </Flex>
                   </div>
                 </Flex>
               </ScrollArea>

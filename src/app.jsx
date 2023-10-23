@@ -1,11 +1,18 @@
 import React from "react";
 import Web from "./components/web";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AllProducts from "./components/allProducts/allProducts";
 
 export default class App extends React.Component {
   render() {
     return (
       <>
-        <Web />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Web />} />
+            <Route path="/allProducts" element={<AllProducts />} />
+          </Routes>
+        </BrowserRouter>
       </>
     );
   }

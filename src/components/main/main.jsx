@@ -3,15 +3,11 @@ import Logo from "../assets/logo.png";
 import MainProductImg_0 from "../assets/mainProduct_0.png";
 
 import Style from "../web.module.scss";
-import Autoplay from "embla-carousel-autoplay";
 import { Carousel } from "@mantine/carousel";
-import { useEffect, useRef } from "react";
 import Fade from "react-reveal/Fade";
-import { Zoom } from "react-reveal";
+import { Link } from "react-router-dom";
 
 const Main = () => {
-  const autoplay = useRef(Autoplay({ delay: 2000 }));
-
   return (
     <>
       <Box maw="100%" w="100%" h="100vh">
@@ -31,9 +27,11 @@ const Main = () => {
                       c="#FFFFFF"
                       ta="center"
                     >
-                      <Text ta="center" fz={17} fw={700} lts={2}>
-                        WOMEN
-                      </Text>
+                      <Link className={Style.HeaderLinks} to="/allProducts">
+                        <Text ta="center" fz={17} fw={700} lts={2}>
+                          WOMEN
+                        </Text>
+                      </Link>
                     </Paper>
                   </Fade>
                 </List>
@@ -49,9 +47,11 @@ const Main = () => {
                       c="#FFFFFF"
                       ta="center"
                     >
-                      <Text ta="center" fz={17} fw={700} lts={2}>
-                        MEN
-                      </Text>
+                      <Link className={Style.HeaderLinks} to="/allProducts">
+                        <Text ta="center" fz={17} fw={700} lts={2}>
+                          MEN
+                        </Text>
+                      </Link>
                     </Paper>
                   </Fade>
                 </List>
@@ -67,9 +67,11 @@ const Main = () => {
                       c="#FFFFFF"
                       ta="center"
                     >
-                      <Text ta="center" fz={17} fw={700} lts={2}>
-                        KIDS
-                      </Text>
+                      <Link className={Style.HeaderLinks} to="/allProducts">
+                        <Text ta="center" fz={17} fw={700} lts={2}>
+                          KIDS
+                        </Text>
+                      </Link>
                     </Paper>
                   </Fade>
                 </List>
@@ -85,9 +87,11 @@ const Main = () => {
                       c="#FFFFFF"
                       ta="center"
                     >
-                      <Text ta="center" fz={17} fw={700} lts={2}>
-                        SALE
-                      </Text>
+                      <Link className={Style.HeaderLinks} to="/allProducts">
+                        <Text ta="center" fz={17} fw={700} lts={2}>
+                          SALE
+                        </Text>
+                      </Link>
                     </Paper>
                   </Fade>
                 </List>
@@ -209,52 +213,43 @@ const Main = () => {
             </Flex>
 
             <Box maw="52%" w="52%" className={Style.mainProducts}>
-              <Zoom top duration="1000">
-                <Carousel
-                  w="100%"
-                  className={Style.mainProducts}
-                  withIndicators
-                  plugins={[autoplay.current]}
-                  onMouseEnter={autoplay.current.stop}
-                  onMouseLeave={autoplay.current.reset}
-                >
-                  <Carousel.Slide>
-                    <img
-                      className={Style.productImges}
-                      src={MainProductImg_0}
-                      alt=""
-                    />
-                  </Carousel.Slide>
-                  <Carousel.Slide>
-                    <img
-                      className={Style.productImges}
-                      src={
-                        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNob2V8ZW58MHx8MHx8fDA%3D"
-                      }
-                      alt=""
-                    />
-                  </Carousel.Slide>
-                  <Carousel.Slide>
-                    <img
-                      className={Style.productImges}
-                      src={
-                        "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2hvZXxlbnwwfHwwfHx8MA%3D%3D"
-                      }
-                      alt=""
-                    />
-                  </Carousel.Slide>
-                  <Carousel.Slide>
-                    <img
-                      className={Style.productImges}
-                      src={
-                        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXxlbnwwfHwwfHx8MA%3D%3D"
-                      }
-                      alt=""
-                    />
-                  </Carousel.Slide>
-                  {/* ...other slides */}
-                </Carousel>
-              </Zoom>
+              <Carousel w="100%" className={Style.mainProducts}>
+                <Carousel.Slide>
+                  <img
+                    className={Style.productImges}
+                    src={MainProductImg_0}
+                    alt=""
+                  />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img
+                    className={Style.productImges}
+                    src={
+                      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNob2V8ZW58MHx8MHx8fDA%3D"
+                    }
+                    alt=""
+                  />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img
+                    className={Style.productImges}
+                    src={
+                      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2hvZXxlbnwwfHwwfHx8MA%3D%3D"
+                    }
+                    alt=""
+                  />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img
+                    className={Style.productImges}
+                    src={
+                      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXxlbnwwfHwwfHx8MA%3D%3D"
+                    }
+                    alt=""
+                  />
+                </Carousel.Slide>
+                {/* ...other slides */}
+              </Carousel>
             </Box>
           </Flex>
         </Box>
