@@ -11,66 +11,132 @@ function Footer() {
         <Box pt={30}>
           <Flex justify="space-around" align="center">
             <Box c="#fff">
-              <div data-aos="fade-left" data-aos-duration="800">
+              <div data-aos="fade-right" data-aos-duration="800">
                 <Text fz={30}>MY ACCOUNT</Text>
               </div>
               <Box pt={10}>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-right"
+                  data-aos-duration="900"
+                  fz={25}
+                  pt={10}
+                >
                   Sign In
                 </Text>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  fz={25}
+                  pt={10}
+                >
                   Register
                 </Text>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-right"
+                  data-aos-duration="1100"
+                  fz={25}
+                  pt={10}
+                >
                   Order Status
                 </Text>
               </Box>
             </Box>
             <Box c="#fff">
-              <Text fz={30}>ABOUT</Text>
+              <Text data-aos="fade-left" data-aos-duration="800" fz={30}>
+                ABOUT
+              </Text>
               <Box pt={10}>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-left"
+                  data-aos-duration="900"
+                  fz={25}
+                  pt={10}
+                >
                   My Store{" "}
                 </Text>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  fz={25}
+                  pt={10}
+                >
                   Media
                 </Text>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-left"
+                  data-aos-duration="1100"
+                  fz={25}
+                  pt={10}
+                >
                   Sustainability
                 </Text>
               </Box>
             </Box>
             <Box c="#fff">
-              <Text fz={30}>HELP</Text>
+              <Text data-aos="fade-right" data-aos-duration="800" fz={30}>
+                HELP
+              </Text>
               <Box pt={10}>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-right"
+                  data-aos-duration="900"
+                  fz={25}
+                  pt={10}
+                >
                   Shipping
                 </Text>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  fz={25}
+                  pt={10}
+                >
                   Returns
                 </Text>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-right"
+                  data-aos-duration="1100"
+                  fz={25}
+                  pt={10}
+                >
                   Sizing
                 </Text>
               </Box>
             </Box>
             <Box c="#fff">
-              <Text fz={30}>LEGAL STUFF</Text>
+              <Text data-aos="fade-left" data-aos-duration="800" fz={30}>
+                LEGAL STUFF
+              </Text>
               <Box pt={10}>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-left"
+                  data-aos-duration="900"
+                  fz={25}
+                  pt={10}
+                >
                   Terms Of Use
                 </Text>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-lefy"
+                  data-aos-duration="1000"
+                  fz={25}
+                  pt={10}
+                >
                   Terms Of Sale
                 </Text>
-                <Text fz={25} pt={10}>
+                <Text
+                  data-aos="fade-left"
+                  data-aos-duration="1100"
+                  fz={25}
+                  pt={10}
+                >
                   Privacy Policy
                 </Text>
               </Box>
             </Box>
           </Flex>
         </Box>
-        <Text c="#ffffff" ta="center" fz={35} pt={40}>
+        <Text data-aos="zoom-in" c="#ffffff" ta="center" fz={35} pt={40}>
           Follow Us
         </Text>
         <Flex justify="center" align="center" gap={50} pt={15}>

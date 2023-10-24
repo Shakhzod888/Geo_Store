@@ -1,19 +1,15 @@
-import { Box, Flex, List, Paper, ScrollArea, Text } from "@mantine/core";
+import { Box, Button, Flex, List, Paper, Text } from "@mantine/core";
 import React from "react";
-import Logo from "../assets/logo.png";
-import Style from "../web.module.scss";
-
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import Style from "../web.module.scss";
+import Logo from "../assets/logo.png";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import AOS from "aos";
-
-function AllProducts() {
+function ChooseProduct() {
   useEffect(() => {
     AOS.init();
   });
-  const [scrollPosition, onScrollPositionChange] = useState({ x: 0, y: 0 });
   return (
     <Box maw={"100%"} w={"100%"} h={"auto"}>
       <Box maw="100%" w="100%" h={100} bg="#545454">
@@ -154,369 +150,93 @@ function AllProducts() {
           </Flex>
         </Flex>
       </Box>
-      <section id="women">
-        <Box h="auto" w="100%">
-          <Box mt={20}>
-            <Text pt={10} fz={50} ff={"Noto Sans"} pl={60} fw={700}>
-              WOMEN
-            </Text>
-            <Flex mt={20} justify="center" align="center" gap={100}>
-              <ScrollArea
-                onScrollPositionChange={onScrollPositionChange}
-                w={1395}
-                h={"auto"}
+      <Box mt={30}>
+        <Flex justify={"center"} align={"center"}>
+          <Box w={"50%"} h={"auto"} mb={30}>
+            <Flex
+              gap={20}
+              justify={"center"}
+              align={"center"}
+              direction={"column"}
+            >
+              <Flex
+                className={Style.chosenProductImg}
+                justify={"space-around"}
+                align={"center"}
+                gap={20}
               >
-                <Flex justify="space-between" gap={95}>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/877413292.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>Silver Slim Block Heel Boots</p>
-                    <Flex>
-                      <p className={Style.cost}>Us $42.99</p>
-                      <p className={Style.costakk}>Us $47.99</p>
-                    </Flex>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media3.newlookassets.com/i/newlook/879521701.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>Black Suedette Chelsea Boots</p>
-                    <Flex gap={10}>
-                      <p className={Style.cost}>Us $31</p>
-                      <p className={Style.costakk}>Us $35.99</p>
-                    </Flex>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/876267001.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Black Leather-Look Stiletto Heel Boots
-                    </p>
-                    <p className={Style.cost}>Us $39.99</p>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/870733618.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Tan Suedette Faux Fur Chunky Boots
-                    </p>
-                    <Flex gap={10}>
-                      <p className={Style.cost}>Us $25.999</p>
-                      <p className={Style.costakk}>Us $25.99</p>
-                    </Flex>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/877244292.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Silver Glitter Block Heel Court Shoes
-                    </p>
-                    <p className={Style.cost}>Us $29.99</p>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/854321693.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>Gold 2 Part Block Heel Sandals</p>
-                    <Flex gap={10}>
-                      <p className={Style.cost}>Us $35.99</p>
-                      <p className={Style.costakk}>Us $39.99</p>
-                    </Flex>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/877293138.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Dark Green Velvet 2 Part Block Sandals
-                    </p>
-                    <p className={Style.cost}>Us $32.99</p>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/884287955.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Skinnydip Lilac Fluffy Slipper Boots
-                    </p>
-                    <p className={Style.cost}>Us $24.00</p>
-                  </div>
-                </Flex>
-              </ScrollArea>
+                <img
+                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9966ff09-0dee-49d3-a8b1-292a09cd03a5/air-jordan-xxxviii-fiba-big-kids-shoes-1N6m7f.png"
+                  alt=""
+                />
+                <img
+                  src="
+               https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/bf877156-a080-457b-bc96-7d7c76378165/air-jordan-xxxviii-fiba-big-kids-shoes-1N6m7f.png"
+                  alt=""
+                />
+              </Flex>
+              <Flex
+                gap={20}
+                className={Style.chosenProductImg}
+                justify={"space-around"}
+                align={"center"}
+              >
+                <img
+                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7eab1ad6-836b-43ef-9613-bc4c7d9be749/air-jordan-xxxviii-fiba-big-kids-shoes-1N6m7f.png"
+                  alt=""
+                />
+                <img
+                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1589eadc-716d-4a28-b1c9-e46875598797/air-jordan-xxxviii-fiba-big-kids-shoes-1N6m7f.png"
+                  alt=""
+                />
+              </Flex>
             </Flex>
           </Box>
-        </Box>
-      </section>
-      <section id="men">
-        <Box h="auto" w="100%">
-          <Box mt={20} pb={20} bg={"#C4C4C4"}>
-            <Text pt={30} fz={50} ff={"Noto Sans"} pl={60} fw={700}>
-              MEN
+          <Box w={"45%"} mr={20} h={"103.5vh"} mb={20} bg={"#C4C4C4"}>
+            <div data-aos="fade-right" data-aos-duration="800">
+              <Text ta={"center"} ff={"Noto Sans"} fz={64} pt={40} fw={700}>
+                JORDAN
+              </Text>
+            </div>
+
+            <Text ta={"center"} pt={20} fz={20} lts={"0.56"}>
+              WIDELY CONSIDERED THE VERY BEST OF ALL THE <br /> COUNTDOWN PACKS
+              OF 2008, THIS SET PAIRS THE AIR <br /> JORDAN 11 “BRED” WITH THE
+              AIR JORDAN 12 “TAXI”, <br /> ADDING UP TO THE PERFECT #23. THESE
+              STYLES ARE <br /> SUPPLIED BY A PREMIUM SNEAKER AND STREET WEAR
+              <br />
+              MARKETPLACE. STOCKING ONLY THE MOST SOUGHT <br /> -AFTER FOOTWEAR
+              AND CLOTHING, THEY SOURCE AND <br /> CURATE SOME OF THE MOST
+              HARD-TO-FIND ITEMS FROM <br /> AROUND THE WORLD.
             </Text>
-            <Flex mt={20} justify="center" align="center" gap={100}>
-              <ScrollArea
-                onScrollPositionChange={onScrollPositionChange}
-                w={1380}
-                h={"auto"}
-              >
-                <Flex justify="space-between" gap={95}>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/842893424.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Rust Leather Perforated Lace Up Brogues
-                    </p>
-                    <p className={Style.cost}>Us $41.99</p>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media3.newlookassets.com/i/newlook/832073901.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Black Stitch Lace Up Shoes Black & <br /> Brown
-                    </p>
-                    <Flex gap={10}>
-                      <p className={Style.cost}>Us $32.99</p>
-                      <p className={Style.costakk}>Us $37.99</p>
-                    </Flex>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/849531703.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Dark Grey Plain Sliders Soft And <br />
-                      Compact
-                    </p>
-                    <Flex gap={10}>
-                      <p className={Style.cost}>Us $9</p>
-                      <p className={Style.costakk}>Us $12.99</p>
-                    </Flex>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/843471003.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Jack & Jones Dark Grey Canvas Chunky Trainers
-                    </p>
-                    <p className={Style.cost}>Us $26.24</p>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media3.newlookassets.com/i/newlook/847773627.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Jack & Jones Dark Brown Leather <br /> Boots
-                    </p>
-                    <Flex gap={10}>
-                      <p className={Style.cost}>Us $67.49</p>
-                      <p className={Style.costakk}>Us $89.99</p>
-                    </Flex>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/864354827.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Jack & Jones Dark Brown Leather Buckle Sliders
-                    </p>
-                    <p className={Style.cost}>Us $24</p>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media3.newlookassets.com/i/newlook/859414541.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Jack & Jones Navy Canvas Slip On Trainers
-                    </p>
-                    <p className={Style.cost}>Us $23.99</p>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/859567924.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Jack & Jones Rust Leather Lace Up Rounded Brogues
-                    </p>
-                    <p className={Style.cost}>Us $43.00</p>
-                  </div>
-                </Flex>
-              </ScrollArea>
+            <Text
+              pl={70}
+              pt={20}
+              lts={"0.385px"}
+              ff={"Noto Sans"}
+              fz={16}
+              fw={700}
+            >
+              Only 1 left — make it yours!
+            </Text>
+            <Text
+              pl={400}
+              pt={20}
+              lts={"0.385px"}
+              ff={"Noto Sans"}
+              fz={16}
+              fw={700}
+            >
+              JORDAN <br /> JORDAN COLLEZIONE SNEAKERS <br /> $150
+            </Text>
+            <Flex justify={"center"} mt={70} align={"center"}>
+              <Button bg={"black"} w={300} h={50}>
+                <Text fz={35}>BUY NOW</Text>
+              </Button>
             </Flex>
           </Box>
-        </Box>
-      </section>
-      <section id="kids">
-        <Box h="auto" w="100%">
-          <Box mt={20} mb={20}>
-            <Text pt={10} fz={50} ff={"Noto Sans"} pl={60} fw={700}>
-              KIDS
-            </Text>
-            <Flex mt={20} justify="center" align="center" gap={100}>
-              <ScrollArea
-                onScrollPositionChange={onScrollPositionChange}
-                w={1395}
-                h={"auto"}
-              >
-                <Flex justify="space-between" gap={95}>
-                  <div className={Style.releasesBox}>
-                    <Link to={"/allProducts/showChosen"}>
-                      <img
-                        src={
-                          "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9966ff09-0dee-49d3-a8b1-292a09cd03a5/air-jordan-xxxviii-fiba-big-kids-shoes-1N6m7f.png"
-                        }
-                        alt=""
-                      />
-                    </Link>
-                    <p className={Style.name}>
-                      Air Jordan XXXVIII "FIBA" Big Kids' Shoes
-                    </p>
-                    <Flex gap={10}>
-                      <p className={Style.cost}>Us $150</p>
-                      <p className={Style.costakk}>Us $180.99</p>
-                    </Flex>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/872125504.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Grey Faux Fur Slipper Boots <br /> Soft
-                    </p>
-                    <Flex gap={10}>
-                      <p className={Style.cost}>Us $16.99</p>
-                      <p className={Style.costakk}>Us $18.99</p>
-                    </Flex>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/884287021.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Skinnydip Light Brown Faux Fur Cat Slippers
-                    </p>
-                    <p className={Style.cost}>Us $22.00</p>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/873048413.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Cream Fair Isle Knit Slipper Boots Soft And Comfort
-                    </p>
-                    <p className={Style.cost}>Us $16.99</p>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/853189735.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Green Canvas High Top Trainers With Any Colors
-                    </p>
-                    <Flex gap={10}>
-                      <p className={Style.cost}>Us $15.00</p>
-                      <p className={Style.costakk}>Us $18.99</p>
-                    </Flex>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/801470204.jpg?strip=true&qlt=50&fmt=webp&w=526"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Girls Grey Star Faux Fur Chunky Slider Slippers
-                    </p>
-                    <Flex gap={10}>
-                      <p className={Style.cost}>Us $7.00</p>
-                      <p className={Style.costakk}>Us $8.00</p>
-                    </Flex>
-                  </div>
-                  <div className={Style.releasesBox}>
-                    <img
-                      src={
-                        "https://media2.newlookassets.com/i/newlook/884287955/womens/clothing/nightwear/skinnydip-lilac-fluffy-slipper-boots.jpg?strip=true&qlt=50&w=720"
-                      }
-                      alt=""
-                    />
-                    <p className={Style.name}>
-                      Skinnydip Lilac Fluffy Slipper Boots And Soft
-                    </p>
-                    <p className={Style.cost}>Us $24.00</p>
-                  </div>
-                </Flex>
-              </ScrollArea>
-            </Flex>
-          </Box>
-        </Box>
-      </section>
+        </Flex>
+      </Box>
       <Box maw="100%" w="100%" h="auto" pb={20} bg="black">
         <Box pt={30}>
           <Flex justify="space-around" align="center">
@@ -751,4 +471,4 @@ function AllProducts() {
   );
 }
 
-export default AllProducts;
+export default ChooseProduct;

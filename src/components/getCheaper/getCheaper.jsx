@@ -1,9 +1,15 @@
 import { Box, Flex, Text, Button } from "@mantine/core";
 import React, { useState } from "react";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import AOS from "aos";
 
 import Style from "../web.module.scss";
 
 function GetCheaper() {
+  useEffect(() => {
+    AOS.init();
+  });
   const [galochka1, setGalochka1] = useState(true);
   const [galochka2, setGalochka2] = useState(false);
 
@@ -21,6 +27,8 @@ function GetCheaper() {
     <>
       <Box maw="100%" w="100%" h="100vh" bg="#545454">
         <Text
+          data-aos="zoom-in"
+          data-aos-duration="800"
           fz={36}
           pt={50}
           ff={"Noto Sans"}
@@ -31,14 +39,38 @@ function GetCheaper() {
         >
           SIGN UP AND GET 10% <br /> OFF
         </Text>
-        <Text fz={28} ff={"Noto Sans"} pt={15} fw={500} c="#fff" ta="center">
+        <Text
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          fz={28}
+          ff={"Noto Sans"}
+          pt={15}
+          fw={500}
+          c="#fff"
+          ta="center"
+        >
           Sign up for early sale access, new in, promotions and <br /> more
         </Text>
-        <Text pl={430} fz={25} ff={"Noto Sans"} c="#fff" lts={1.5} pt={30}>
+        <Text
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          pl={430}
+          fz={25}
+          ff={"Noto Sans"}
+          c="#fff"
+          lts={1.5}
+          pt={30}
+        >
           GET UPDATES BY
         </Text>
         <Box mt={10}>
-          <Flex pl={430} gap={10} onClick={toggleIcon1}>
+          <Flex
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            pl={430}
+            gap={10}
+            onClick={toggleIcon1}
+          >
             <Box pt={26}>
               {galochka1 ? (
                 <svg
@@ -76,7 +108,7 @@ function GetCheaper() {
               Email
             </Text>
           </Flex>
-          <Box pl={350} pt={20}>
+          <Box data-aos="zoom-in" data-aos-duration="800" pl={350} pt={20}>
             {galochka1 ? (
               <input
                 className={Style.email_input}
@@ -92,7 +124,13 @@ function GetCheaper() {
           </Box>
         </Box>
         <Box mt={20}>
-          <Flex pl={430} gap={10} onClick={toggleIcon2}>
+          <Flex
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            pl={430}
+            gap={10}
+            onClick={toggleIcon2}
+          >
             <Box pt={20}>
               {galochka2 ? (
                 <svg
@@ -131,12 +169,12 @@ function GetCheaper() {
             </Text>
           </Flex>
         </Box>
-        <Box pl={560} pt={25}>
+        <Box data-aos="zoom-in" data-aos-duration="800" pl={560} pt={25}>
           <Button ff={"Noto Sans"} fz={30} lts={1.5} w={400} h={60} bg="black">
             SIGN UP
           </Button>
         </Box>
-        <Box>
+        <Box data-aos="zoom-in" data-aos-duration="800">
           <p className={Style.lastProg}>
             By subscribing you agree with our Terms & Conditions and Privacy
             Policy. To <br /> opt out, click unsubscribe at the bottom of our

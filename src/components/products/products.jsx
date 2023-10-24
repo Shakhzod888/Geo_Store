@@ -3,9 +3,14 @@ import Style from "../web.module.scss";
 
 import { useState } from "react";
 import { ScrollArea } from "@mantine/core";
-import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import AOS from "aos";
 function Products() {
+  useEffect(() => {
+    AOS.init();
+  });
   const [scrollPosition, onScrollPositionChange] = useState({ x: 0, y: 0 });
   return (
     <Box maw="100%" w="100%" h="auto">
@@ -13,104 +18,138 @@ function Products() {
         <Flex justify="space-between">
           <Box w="49%" h="60vh" bg="#545454">
             <Box pt={30}>
-              <Fade top>
-                <Text fz={50} pl={46} fw={700} c="#FFFFFF">
-                  WOMEN
-                </Text>
-              </Fade>
+              <Text
+                data-aos="fade-down"
+                data-aos-duration="800"
+                fz={50}
+                pl={46}
+                fw={700}
+                c="#FFFFFF"
+              >
+                WOMEN
+              </Text>
               <Flex className={Style.caruselProducts} justify="end" gap={3}>
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="800"
                   src={
                     "https://media2.newlookassets.com/i/newlook/877293138.jpg?strip=true&qlt=50&fmt=webp&w=526"
                   }
                   alt=""
                 />
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="800"
                   src={
                     "https://media2.newlookassets.com/i/newlook/877244292.jpg?strip=true&qlt=50&fmt=webp&w=526"
                   }
                   alt=""
                 />
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="800"
                   src={
                     "https://media2.newlookassets.com/i/newlook/872142904.jpg?strip=true&qlt=50&fmt=webp&w=526"
                   }
                   alt=""
                 />
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="800"
                   src={
                     "https://media2.newlookassets.com/i/newlook/884287955.jpg?strip=true&qlt=50&fmt=webp&w=526"
                   }
                   alt=""
                 />
               </Flex>
-              <Fade bottom>
-                <Link className={Style.LinkShop} to={"/allProducts"}>
-                  <Text
-                    className={Style.cursoreP}
-                    pt={25}
-                    pl={46}
-                    fz={50}
-                    fw={700}
-                    c="#FFFFFF"
-                    ff={"Noto Sans"}
-                  >{`SHOP NOW ->`}</Text>
-                </Link>
-              </Fade>
+              <Link className={Style.LinkShop} to={"/allProducts"}>
+                <Text
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  className={Style.cursoreP}
+                  pt={25}
+                  pl={46}
+                  fz={50}
+                  fw={700}
+                  c="#FFFFFF"
+                  ff={"Noto Sans"}
+                >{`SHOP NOW ->`}</Text>
+              </Link>
             </Box>
           </Box>
           <Box w="49%" h="60vh" bg="#545454">
             <Box pt={30}>
-              <Fade top>
-                <Text fz={50} pl={46} fw={700} c="#FFFFFF">
-                  MEN
-                </Text>
-              </Fade>
+              <Text
+                data-aos="fade-down"
+                data-aos-duration="800"
+                fz={50}
+                pl={46}
+                fw={700}
+                c="#FFFFFF"
+              >
+                MEN
+              </Text>
               <Flex className={Style.caruselProducts} justify="end" gap={3}>
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="800"
                   src={
                     "https://media3.newlookassets.com/i/newlook/848824927.jpg?strip=true&qlt=50&fmt=webp&w=526"
                   }
                   alt=""
                 />
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="800"
                   src={
                     "https://media2.newlookassets.com/i/newlook/842893424.jpg?strip=true&qlt=50&fmt=webp&w=526"
                   }
                   alt=""
                 />
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="800"
                   src={
                     "https://media2.newlookassets.com/i/newlook/864571724.jpg?strip=true&qlt=50&fmt=webp&w=526"
                   }
                   alt=""
                 />
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="800"
                   src={
                     "https://media2.newlookassets.com/i/newlook/859567924.jpg?strip=true&qlt=50&fmt=webp&w=526"
                   }
                   alt=""
                 />
               </Flex>
-              <Fade bottom>
-                <Link className={Style.LinkShop} to={"/allProducts"}>
-                  <Text
-                    className={Style.cursoreP}
-                    pt={25}
-                    pl={46}
-                    fz={50}
-                    fw={700}
-                    c="#FFFFFF"
-                    ff={"Noto Sans"}
-                  >{`SHOP NOW ->`}</Text>
-                </Link>
-              </Fade>
+              <Link className={Style.LinkShop} to={"/allProducts"}>
+                <Text
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  className={Style.cursoreP}
+                  pt={25}
+                  pl={46}
+                  fz={50}
+                  fw={700}
+                  c="#FFFFFF"
+                  ff={"Noto Sans"}
+                >{`SHOP NOW ->`}</Text>
+              </Link>
             </Box>
           </Box>
         </Flex>
         <Box h="auto" w="100%">
           <Box mt={20} mb={20}>
-            <Text pt={10} fz={50} ff={"Noto Sans"} pl={60} fw={700}>
+            <Text
+              data-aos="fade-right"
+              data-aos-duration="800"
+              pt={10}
+              fz={50}
+              ff={"Noto Sans"}
+              pl={60}
+              fw={700}
+            >
               NEW RELEASES
             </Text>
             <Flex mt={20} justify="center" align="center" gap={100}>
@@ -211,7 +250,15 @@ function Products() {
         </Box>
         <Box h="auto" w="100%">
           <Box mt={20} pb={20} bg={"#C4C4C4"}>
-            <Text pt={30} fz={50} ff={"Noto Sans"} pl={60} fw={700}>
+            <Text
+              data-aos="fade-right"
+              data-aos-duration="800"
+              pt={30}
+              fz={50}
+              ff={"Noto Sans"}
+              pl={60}
+              fw={700}
+            >
               TOP KICKS
             </Text>
             <Flex mt={20} justify="center" align="center" gap={100}>
