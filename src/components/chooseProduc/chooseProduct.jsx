@@ -166,10 +166,14 @@ function ChooseProduct() {
                 gap={20}
               >
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
                   src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9966ff09-0dee-49d3-a8b1-292a09cd03a5/air-jordan-xxxviii-fiba-big-kids-shoes-1N6m7f.png"
                   alt=""
                 />
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
                   src="
                https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/bf877156-a080-457b-bc96-7d7c76378165/air-jordan-xxxviii-fiba-big-kids-shoes-1N6m7f.png"
                   alt=""
@@ -182,10 +186,14 @@ function ChooseProduct() {
                 align={"center"}
               >
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
                   src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7eab1ad6-836b-43ef-9613-bc4c7d9be749/air-jordan-xxxviii-fiba-big-kids-shoes-1N6m7f.png"
                   alt=""
                 />
                 <img
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
                   src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1589eadc-716d-4a28-b1c9-e46875598797/air-jordan-xxxviii-fiba-big-kids-shoes-1N6m7f.png"
                   alt=""
                 />
@@ -199,7 +207,14 @@ function ChooseProduct() {
               </Text>
             </div>
 
-            <Text ta={"center"} pt={20} fz={20} lts={"0.56"}>
+            <Text
+              data-aos="zoom-in"
+              data-aos-duration="600"
+              ta={"center"}
+              pt={20}
+              fz={20}
+              lts={"0.56"}
+            >
               WIDELY CONSIDERED THE VERY BEST OF ALL THE <br /> COUNTDOWN PACKS
               OF 2008, THIS SET PAIRS THE AIR <br /> JORDAN 11 “BRED” WITH THE
               AIR JORDAN 12 “TAXI”, <br /> ADDING UP TO THE PERFECT #23. THESE
@@ -216,6 +231,8 @@ function ChooseProduct() {
               ff={"Noto Sans"}
               fz={16}
               fw={700}
+              data-aos="zoom-in"
+              data-aos-duration="600"
             >
               Only 1 left — make it yours!
             </Text>
@@ -226,11 +243,19 @@ function ChooseProduct() {
               ff={"Noto Sans"}
               fz={16}
               fw={700}
+              data-aos="zoom-in"
+              data-aos-duration="600"
             >
               JORDAN <br /> JORDAN COLLEZIONE SNEAKERS <br /> $150
             </Text>
             <Flex justify={"center"} mt={70} align={"center"}>
-              <Button bg={"black"} w={300} h={50}>
+              <Button
+                data-aos="zoom-in"
+                data-aos-duration="600"
+                bg={"black"}
+                w={300}
+                h={50}
+              >
                 <Text fz={35}>BUY NOW</Text>
               </Button>
             </Flex>

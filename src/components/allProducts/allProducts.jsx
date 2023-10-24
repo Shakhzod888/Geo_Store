@@ -20,78 +20,81 @@ function AllProducts() {
         <Flex pt={20} gap={200} align="center" justify="space-around">
           <Flex gap={50}>
             <Flex gap={30} align="center" justify="center">
-              <List data-aos="zoom-in" data-aos-duration="700">
-                <Paper
-                  className={Style.links}
-                  radius="lg"
-                  p={6}
-                  w={100}
-                  h={40}
-                  bg="#000000"
-                  c="#FFFFFF"
-                  ta="center"
-                >
-                  <Link className={Style.HeaderLinks} to="/allProducts">
+              <a href="#women" className={Style.HeaderLinks}>
+                <List data-aos="zoom-in" data-aos-duration="700">
+                  <Paper
+                    className={Style.links}
+                    radius="lg"
+                    p={6}
+                    w={100}
+                    h={40}
+                    bg="#000000"
+                    c="#FFFFFF"
+                    ta="center"
+                  >
                     <Text ta="center" fz={17} fw={700} lts={2}>
                       WOMEN
                     </Text>
-                  </Link>
-                </Paper>
-              </List>
-              <List data-aos="zoom-in" data-aos-duration="800">
-                <Paper
-                  className={Style.links}
-                  radius="lg"
-                  p={6}
-                  w={100}
-                  h={40}
-                  bg="#000000"
-                  c="#FFFFFF"
-                  ta="center"
-                >
-                  <Link className={Style.HeaderLinks} to="/allProducts">
+                  </Paper>
+                </List>
+              </a>
+
+              <a href="#men" className={Style.HeaderLinks}>
+                <List data-aos="zoom-in" data-aos-duration="800">
+                  <Paper
+                    className={Style.links}
+                    radius="lg"
+                    p={6}
+                    w={100}
+                    h={40}
+                    bg="#000000"
+                    c="#FFFFFF"
+                    ta="center"
+                  >
                     <Text ta="center" fz={17} fw={700} lts={2}>
                       MEN
                     </Text>
-                  </Link>
-                </Paper>
-              </List>
-              <List data-aos="zoom-in" data-aos-duration="900">
-                <Paper
-                  className={Style.links}
-                  radius="lg"
-                  p={6}
-                  w={100}
-                  h={40}
-                  bg="#000000"
-                  c="#FFFFFF"
-                  ta="center"
-                >
-                  <Link className={Style.HeaderLinks} to="/allProducts">
+                  </Paper>
+                </List>
+              </a>
+
+              <a href="#kids" className={Style.HeaderLinks}>
+                <List data-aos="zoom-in" data-aos-duration="900">
+                  <Paper
+                    className={Style.links}
+                    radius="lg"
+                    p={6}
+                    w={100}
+                    h={40}
+                    bg="#000000"
+                    c="#FFFFFF"
+                    ta="center"
+                  >
                     <Text ta="center" fz={17} fw={700} lts={2}>
                       KIDS
                     </Text>
-                  </Link>
-                </Paper>
-              </List>
-              <List data-aos="zoom-in" data-aos-duration="1000">
-                <Paper
-                  className={Style.links}
-                  radius="lg"
-                  p={6}
-                  w={100}
-                  h={40}
-                  bg="#000000"
-                  c="#FFFFFF"
-                  ta="center"
-                >
-                  <Link className={Style.HeaderLinks} to="/allProducts">
+                  </Paper>
+                </List>
+              </a>
+
+              <Link className={Style.HeaderLinks} to="/">
+                <List data-aos="zoom-in" data-aos-duration="1000">
+                  <Paper
+                    className={Style.links}
+                    radius="lg"
+                    p={6}
+                    w={100}
+                    h={40}
+                    bg="#000000"
+                    c="#FFFFFF"
+                    ta="center"
+                  >
                     <Text ta="center" fz={17} fw={700} lts={2}>
                       SALE
                     </Text>
-                  </Link>
-                </Paper>
-              </List>
+                  </Paper>
+                </List>
+              </Link>
             </Flex>
 
             <Box data-aos="zoom-in" data-aos-duration="1000">
@@ -157,7 +160,15 @@ function AllProducts() {
       <section id="women">
         <Box h="auto" w="100%">
           <Box mt={20}>
-            <Text pt={10} fz={50} ff={"Noto Sans"} pl={60} fw={700}>
+            <Text
+              data-aos="fade-right"
+              data-aos-duration="800"
+              pt={10}
+              fz={50}
+              ff={"Noto Sans"}
+              pl={60}
+              fw={700}
+            >
               WOMEN
             </Text>
             <Flex mt={20} justify="center" align="center" gap={100}>
@@ -278,7 +289,15 @@ function AllProducts() {
       <section id="men">
         <Box h="auto" w="100%">
           <Box mt={20} pb={20} bg={"#C4C4C4"}>
-            <Text pt={30} fz={50} ff={"Noto Sans"} pl={60} fw={700}>
+            <Text
+              data-aos="fade-right"
+              data-aos-duration="800"
+              pt={30}
+              fz={50}
+              ff={"Noto Sans"}
+              pl={60}
+              fw={700}
+            >
               MEN
             </Text>
             <Flex mt={20} justify="center" align="center" gap={100}>
@@ -403,7 +422,15 @@ function AllProducts() {
       <section id="kids">
         <Box h="auto" w="100%">
           <Box mt={20} mb={20}>
-            <Text pt={10} fz={50} ff={"Noto Sans"} pl={60} fw={700}>
+            <Text
+              data-aos="fade-right"
+              data-aos-duration="800"
+              pt={10}
+              fz={50}
+              ff={"Noto Sans"}
+              pl={60}
+              fw={700}
+            >
               KIDS
             </Text>
             <Flex mt={20} justify="center" align="center" gap={100}>

@@ -21,78 +21,78 @@ const Main = () => {
           <Flex pt={20} gap={200} align="center" justify="space-around">
             <Flex gap={50}>
               <Flex gap={30} align="center" justify="center">
-                <List data-aos="zoom-in" data-aos-duration="700">
-                  <Paper
-                    className={Style.links}
-                    radius="lg"
-                    p={6}
-                    w={100}
-                    h={40}
-                    bg="#000000"
-                    c="#FFFFFF"
-                    ta="center"
-                  >
-                    <Link className={Style.HeaderLinks} to="/allProducts">
+                <Link className={Style.HeaderLinks} to="/allProducts">
+                  <List data-aos="zoom-in" data-aos-duration="700">
+                    <Paper
+                      className={Style.links}
+                      radius="lg"
+                      p={6}
+                      w={100}
+                      h={40}
+                      bg="#000000"
+                      c="#FFFFFF"
+                      ta="center"
+                    >
                       <Text ta="center" fz={17} fw={700} lts={2}>
                         WOMEN
                       </Text>
-                    </Link>
-                  </Paper>
-                </List>
-                <List data-aos="zoom-in" data-aos-duration="800">
-                  <Paper
-                    className={Style.links}
-                    radius="lg"
-                    p={6}
-                    w={100}
-                    h={40}
-                    bg="#000000"
-                    c="#FFFFFF"
-                    ta="center"
-                  >
-                    <Link className={Style.HeaderLinks} to="/allProducts">
+                    </Paper>
+                  </List>
+                </Link>
+                <Link className={Style.HeaderLinks} to="/allProducts">
+                  <List data-aos="zoom-in" data-aos-duration="800">
+                    <Paper
+                      className={Style.links}
+                      radius="lg"
+                      p={6}
+                      w={100}
+                      h={40}
+                      bg="#000000"
+                      c="#FFFFFF"
+                      ta="center"
+                    >
                       <Text ta="center" fz={17} fw={700} lts={2}>
                         MEN
                       </Text>
-                    </Link>
-                  </Paper>
-                </List>
-                <List data-aos="zoom-in" data-aos-duration="900">
-                  <Paper
-                    className={Style.links}
-                    radius="lg"
-                    p={6}
-                    w={100}
-                    h={40}
-                    bg="#000000"
-                    c="#FFFFFF"
-                    ta="center"
-                  >
-                    <Link className={Style.HeaderLinks} to="/allProducts">
+                    </Paper>
+                  </List>
+                </Link>
+                <Link className={Style.HeaderLinks} to="/allProducts">
+                  <List data-aos="zoom-in" data-aos-duration="900">
+                    <Paper
+                      className={Style.links}
+                      radius="lg"
+                      p={6}
+                      w={100}
+                      h={40}
+                      bg="#000000"
+                      c="#FFFFFF"
+                      ta="center"
+                    >
                       <Text ta="center" fz={17} fw={700} lts={2}>
                         KIDS
                       </Text>
-                    </Link>
-                  </Paper>
-                </List>
-                <List data-aos="zoom-in" data-aos-duration="1000">
-                  <Paper
-                    className={Style.links}
-                    radius="lg"
-                    p={6}
-                    w={100}
-                    h={40}
-                    bg="#000000"
-                    c="#FFFFFF"
-                    ta="center"
-                  >
-                    <Link className={Style.HeaderLinks} to="/allProducts">
+                    </Paper>
+                  </List>
+                </Link>
+                <Link className={Style.HeaderLinks} to="/allProducts">
+                  <List data-aos="zoom-in" data-aos-duration="1000">
+                    <Paper
+                      className={Style.links}
+                      radius="lg"
+                      p={6}
+                      w={100}
+                      h={40}
+                      bg="#000000"
+                      c="#FFFFFF"
+                      ta="center"
+                    >
                       <Text ta="center" fz={17} fw={700} lts={2}>
                         SALE
                       </Text>
-                    </Link>
-                  </Paper>
-                </List>
+                    </Paper>
+                  </List>
+                </Link>
               </Flex>
 
               <Box data-aos="zoom-in" data-aos-duration="1000">
